@@ -13,6 +13,7 @@ class Admin extends CI_Controller {
 		//===== Load Model =====
 		$this->load->model('m_admin');
 		$this->load->model('m_produk');
+		$this->load->model('m_kategori');
 		//===== Load Library =====
 		$this->load->library('upload');	
 	}
@@ -84,7 +85,7 @@ class Admin extends CI_Controller {
 	{
 	session_destroy();
 	session_unset();
-	echo "<meta http-equiv='refresh' content='0; url=".base_url()."panel'>";
+	echo "<meta http-equiv='refresh' content='0; url=".base_url()."admin'>";
 	}
 
 	public function home()
@@ -109,6 +110,21 @@ class Admin extends CI_Controller {
 		$data['judul2']	= "";					
 		$data['set']	= "view";	
 		$data['dt_produk'] = $this->m_produk->get_all();		
+		$this->load->view('t_panel/header',$data);
+		$this->load->view("t_panel/aside");
+		$this->load->view("panel/$page");		
+		$this->load->view('t_panel/footer');
+	}
+
+	public function kategori()
+	{		
+		$page			= "kategori";	
+		$data['isi']    = "kategori";	
+		$data['title']	= "Kategori";			
+		$data['judul1']	= "Kategori";			
+		$data['judul2']	= "";					
+		$data['set']	= "view";	
+		$data['dt_kategori'] = $this->m_kategori->get_all();		
 		$this->load->view('t_panel/header',$data);
 		$this->load->view("t_panel/aside");
 		$this->load->view("panel/$page");		

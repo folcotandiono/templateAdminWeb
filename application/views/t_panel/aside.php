@@ -52,10 +52,10 @@
               </a>
               <ul class="treeview-menu">
                 <li class="<?php 
-                  if($isi=='produk'){
+                  if($isi=='kategori'){
                     echo "active";
                   } 
-                  ?>"><a href="admin/produk"><i class="fa fa-circle-o"></i> Produk</a></li>    
+                  ?>"><a href="admin/kategori"><i class="fa fa-circle-o"></i> Kategori</a></li>    
                   <li class="<?php 
                   if($isi=='user'){
                     echo "active";

@@ -27,11 +27,11 @@ if($tgl=='01' or $tgl=='10'){
           <div class="small-box bg-red">
             <div class="inner">
             <?php                              
-            $d  = "SELECT COUNT(tabel_produk.id_produk) as jum FROM tabel_produk";                
+            $d  = "SELECT COUNT(kategori.id_kategori) as jum FROM kategori";                
             $in = $this->db->query($d);
             $re  = $in->row();
             ?>
-              <h3><?php echo $re->jum ?> Produk</h3>
+              <h3><?php echo $re->jum ?> Kategori</h3>
               <p>Aktif</p>
             </div>
             <div class="icon">
@@ -52,7 +52,7 @@ if($tgl=='01' or $tgl=='10'){
             <div class="inner">
             <?php
             
-              $d  = "SELECT COUNT(tabel_user.id_user) as jum FROM tabel_user";
+              $d  = "SELECT COUNT(user.id_user) as jum FROM user";
             
             $in = $this->db->query($d);
             $re  = $in->row();

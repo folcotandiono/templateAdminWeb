@@ -31,10 +31,10 @@
         <header class="main-header">
         
             <!-- Logo -->
-            <a href="panel/home" class="logo">
-                <span class="logo-mini"><b>T. O.</b></span>
+            <a href="admin/home" class="logo">
+                <span class="logo-mini"><b>E-com</b></span>
               <!-- logo for regular state and mobile devices -->
-              <span class="logo-lg"><b>Toko Online</b></span>
+              <span class="logo-lg"><b>E-commerce</b></span>
             </a>
 
             <!-- Header Navbar: style can be found in header.less -->
@@ -75,8 +75,8 @@
 
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
-                                    <div class="pull-left"><a href="panel/profil" class="btn btn-default btn-flat">Profile</a></div>
-                                    <div class="pull-right"><a href="panel/logout" class="btn btn-default btn-flat">Sign out</a></div>
+                                    <!-- <div class="pull-left"><a href="admin/profil" class="btn btn-default btn-flat">Profile</a></div> -->
+                                    <div class="pull-right"><a href="admin/logout" class="btn btn-default btn-flat">Sign out</a></div>
                                 </li>
                             </ul>
                         </li>

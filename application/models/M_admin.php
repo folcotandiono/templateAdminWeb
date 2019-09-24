@@ -8,7 +8,7 @@ class M_admin extends CI_Model {
 	}
 	public function get_one($id)
 	{
-		$sql = "select * from tabel_user where id_user = '$id' ";
+		$sql = "select * from user where id_user = '$id' ";
 		return $this->db->query($sql);
 	}
 	public function get_setting()
@@ -22,7 +22,7 @@ class M_admin extends CI_Model {
     }
 	public function get_all()
 	{
-		$sql = "select * from tabel_user where level <> 'super admin'";
+		$sql = "select * from user where level <> 'super admin'";
 		return $this->db->query($sql);
 	}
 	public function kondisiCond($tables,$where)
@@ -36,18 +36,18 @@ class M_admin extends CI_Model {
   }
 	public function cek_user($id)
 	{
-		$sql = "select * from tabel_user where username = '$id' ";
+		$sql = "select * from user where username = '$id' ";
 		return $this->db->query($sql);
 	}
 	function login($username, $password)
 	{
-		$sql = "select * from tabel_user where username = '$username' AND password = '$password'";
+		$sql = "select * from user where username = '$username' AND password = '$password'";
 		return $this->db->query($sql);	
 	}	
 	function edit($id, $data)
 	{
 		$this->db->where('id_user', $id);
-		$this->db->update('tabel_user', $data); 
+		$this->db->update('user', $data); 
 	}
 	function edit_setting($id, $data)
 	{
@@ -57,16 +57,16 @@ class M_admin extends CI_Model {
 	function edit_akun($id, $data)
 	{
 		$this->db->where('username', $id);
-		$this->db->update('tabel_user', $data); 
+		$this->db->update('user', $data); 
 	}
 	function hapus($id)
 	{
 		$this->db->where('id_user', $id);
-		$this->db->delete('tabel_user'); 
+		$this->db->delete('user'); 
 	}
 	public function tambah($data)
 	{
-		$query=$this->db->insert('tabel_user',$data);
+		$query=$this->db->insert('user',$data);
 	}
 	public function tambah_pesan($data)
 	{
